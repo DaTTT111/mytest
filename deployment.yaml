@@ -1,7 +1,7 @@
 apiVersion: extensions/v1beta1 # for versions before 1.8.0 use apps/v1beta1
 kind: Deployment
 metadata:
-  name: nginx-deployment-basic
+  name: web-deployment-basic
   labels:
     app: nginx
 spec:
@@ -18,6 +18,6 @@ spec:
     #    env: test-team
       containers:
       - name: nginx
-        image: registry-vpc.cn-beijing.aliyuncs.com/wz-test-registry/nginx # replace it with your exactly <image_name:tags>
+        image: registry-vpc.cn-beijing.aliyuncs.com/wz-test-registry/nginx
         ports:
         - containerPort: 80
