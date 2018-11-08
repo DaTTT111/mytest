@@ -16,7 +16,7 @@ spec:
         app: mytest
     spec:
       containers:
-        - image: registry-vpc.cn-beijing.aliyuncs.com/wz-test-registry/nginx:$tag
+        - image: registry-vpc.cn-beijing.aliyuncs.com/wz-test-registry/nginx:${tag}
           imagePullPolicy: Always
           name: mytest
           ports:
