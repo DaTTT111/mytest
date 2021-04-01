@@ -1,4 +1,4 @@
-apiVersion: apps/v1beta2
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
@@ -16,7 +16,7 @@ spec:
         app: mytest
     spec:
       containers:
-        - image: registry-vpc.cn-beijing.aliyuncs.com/wz-test-registry/nginx:${tag}
+        - image: registry-vpc.cn-beijing.aliyuncs.com/acr-poc/cicd:${tag}
           imagePullPolicy: Always
           name: mytest
           ports:
